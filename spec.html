@@ -32567,13 +32567,13 @@ THH:mm:ss.sss
         <p>Unless the sort order is specified above to be implementation-defined, _items_ must have the following two characteristics after executing step <emu-xref href="#step-array-sort"></emu-xref> of the algorithm above:</p>
         <ul>
           <li>
-            There must be some mathematical permutation &pi; of the non-negative integers less than _itemCount_, such that for every nonnegative integer _j_ less than _itemCount_, the element <emu-eqn>old[_j_]</emu-eqn> is exactly the same as <emu-eqn>new[&pi;(_j_)]</emu-eqn>.
+            There must be some mathematical permutation &pi; of the non-negative integers less than _itemCount_, such that for every non-negative integer _j_ less than _itemCount_, the element <emu-eqn>old[_j_]</emu-eqn> is exactly the same as <emu-eqn>new[&pi;(_j_)]</emu-eqn>.
           </li>
           <li>
             Then for all non-negative integers _j_ and _k_, each less than _itemCount_, if <emu-eqn>SortCompare(old[_j_], old[_k_]) &lt; 0</emu-eqn> (see SortCompare below), then <emu-eqn>&pi;(_j_) &lt; &pi;(_k_)</emu-eqn>.
           </li>
         </ul>
-        <p>Here the notation <emu-eqn>old[_j_]</emu-eqn> is used to refer to <emu-eqn>_items_[_j_]</emu-eqn> before step 8 is executed, and the notation <emu-eqn>new[_j_]</emu-eqn> to refer to <emu-eqn>_items_[_j_]</emu-eqn> after step <emu-xref href="#step-array-sort"></emu-xref> has been executed.</p>
+        <p>Here the notation <emu-eqn>old[_j_]</emu-eqn> is used to refer to <emu-eqn>_items_[_j_]</emu-eqn> before step <emu-xref href="#step-array-sort"></emu-xref> is executed, and the notation <emu-eqn>new[_j_]</emu-eqn> to refer to <emu-eqn>_items_[_j_]</emu-eqn> after step <emu-xref href="#step-array-sort"></emu-xref> has been executed.</p>
         <p>A function _comparefn_ is a consistent comparison function for a set of values _S_ if all of the requirements below are met for all values _a_, _b_, and _c_ (possibly the same value) in the set _S_: The notation <emu-eqn>_a_ &lt;<sub>CF</sub> _b_</emu-eqn> means <emu-eqn>_comparefn_(_a_, _b_) &lt; 0</emu-eqn>; <emu-eqn>_a_ =<sub>CF</sub> _b_</emu-eqn> means <emu-eqn>_comparefn_(_a_, _b_) = 0</emu-eqn> (of either sign); and <emu-eqn>_a_ &gt;<sub>CF</sub> _b_</emu-eqn> means <emu-eqn>_comparefn_(_a_, _b_) &gt; 0</emu-eqn>.</p>
         <ul>
           <li>
